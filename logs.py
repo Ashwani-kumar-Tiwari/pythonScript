@@ -5,7 +5,7 @@ logger = logging.getLogger(__name__)
 
 # TODO: replace the all-zero GUID with your instrumentation key.
 logger.addHandler(AzureLogHandler(
-    connection_string='InstrumentationKey=b2ee777e-d3d1-4bd9-aa4f-d3c58d2b0a64')
+    connection_string='InstrumentationKey=4497e9b3-381f-4070-9cb6-7dd666ca6ec4')
 )
 # You can also instantiate the exporter directly if you have the environment variable
 # `APPLICATIONINSIGHTS_CONNECTION_STRING` configured
