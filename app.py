@@ -14,12 +14,12 @@ def home():
 
     logger = logging.getLogger(__name__)
 
-    handler = AzureLogHandler(connection_string='')
+    handler = AzureLogHandler(connection_string='InstrumentationKey=4497e9b3-381f-4070-9cb6-7dd666ca6ec4;IngestionEndpoint=https://centralus-0.in.applicationinsights.azure.com/;LiveEndpoint=https://centralus.livediagnostics.monitor.azure.com/')
     handler.setFormatter(logging.Formatter('%(traceId)s %(spanId)s %(message)s'))
     logger.addHandler(handler)
 
     tracer = Tracer(
-        exporter=AzureExporter(connection_string=''),
+        exporter=AzureExporter(connection_string='InstrumentationKey=4497e9b3-381f-4070-9cb6-7dd666ca6ec4;IngestionEndpoint=https://centralus-0.in.applicationinsights.azure.com/;LiveEndpoint=https://centralus.livediagnostics.monitor.azure.com/'),
         sampler=ProbabilitySampler(1.0)
     )
 
